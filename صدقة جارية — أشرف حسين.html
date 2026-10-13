@@ -1,0 +1,532 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>صدقة جارية — أشرف حسين</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;500;700&family=Tajawal:wght@300;400;500;700&display=swap">
+<style>
+  /* Warm Haram-style cream ground, soft gold + calm green; one quiet reading column */
+  :root {
+    --bg: #f3ebda;
+    --bg-2: #efe5cf;
+    --surface: #fbf6ec;
+    --surface-2: #f0e7d4;
+    --fg: #3a3226;
+    --muted: #776b56;
+    --faint: #a99a7e;
+    --accent: #4a7a5f;
+    --accent-soft: #e7efe4;
+    --gold: #b2914e;
+    --gold-soft: #f0e6cf;
+    --line: #e3d7bd;
+    --shadow: 0 2px 22px rgba(120,96,52,.10);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16181c;
+      --bg-2: #1a1d22;
+      --surface: #1d2126;
+      --surface-2: #24282f;
+      --fg: #ece5d6;
+      --muted: #a9a290;
+      --faint: #6e6a5f;
+      --accent: #84bd9e;
+      --accent-soft: #1f2b25;
+      --gold: #d4af6a;
+      --gold-soft: #2a2416;
+      --line: #2d313a;
+      --shadow: 0 2px 26px rgba(0,0,0,.4);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181c;
+    --bg-2: #1a1d22;
+    --surface: #1d2126;
+    --surface-2: #24282f;
+    --fg: #ece5d6;
+    --muted: #a9a290;
+    --faint: #6e6a5f;
+    --accent: #84bd9e;
+    --accent-soft: #1f2b25;
+    --gold: #d4af6a;
+    --gold-soft: #2a2416;
+    --line: #2d313a;
+    --shadow: 0 2px 26px rgba(0,0,0,.4);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background:
+      radial-gradient(1200px 500px at 50% -120px, var(--gold-soft) 0%, transparent 60%),
+      var(--bg);
+    color: var(--fg);
+    font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    direction: rtl;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 0 56px;
+  }
+
+  /* ---- Hero ---- */
+  header { text-align: center; padding-block: 50px 34px; }
+  .bismillah {
+    font-family: 'Amiri Quran', serif;
+    color: var(--gold);
+    font-size: clamp(26px, 8vw, 34px);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+  }
+  .name {
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    font-size: clamp(44px, 14vw, 66px);
+    line-height: 1.25;
+    margin: 0 0 6px;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  .rahma {
+    display: block;
+    font-size: clamp(15px, 4.4vw, 18px);
+    font-weight: 400;
+    font-family: 'Tajawal', sans-serif;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+  .passed { font-size: 14px; color: var(--faint); margin-top: 22px; }
+
+  /* ---- Section ---- */
+  section { margin-top: 40px; }
+  .label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .label::before, .label::after {
+    content: ""; height: 1px; background: var(--line); flex: 1;
+  }
+  .sub { text-align: center; font-size: 13px; color: var(--faint); margin: 0 0 20px; }
+
+  /* ---- Verse card ---- */
+  .verse {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 24px 18px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .ayah {
+    font-family: 'Amiri Quran', 'Scheherazade New', serif;
+    font-size: clamp(23px, 6.4vw, 28px);
+    line-height: 2.15;
+    color: var(--fg);
+    text-align: center;
+    margin: 0 0 16px;
+  }
+  .foot {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); flex-wrap: wrap;
+  }
+  .src { font-size: 13px; color: var(--gold); font-weight: 500; font-family: 'Tajawal', sans-serif; }
+  .listen {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'Tajawal', sans-serif; font-size: 13px; font-weight: 500;
+    color: var(--accent); background: var(--accent-soft);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 7px 14px; text-decoration: none; transition: filter .2s;
+  }
+  .listen:hover { filter: brightness(1.04); }
+  .listen:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .listen svg { width: 15px; height: 15px; flex: none; }
+
+  /* ---- Dua ---- */
+  .dua {
+    background: var(--accent-soft);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    font-family: 'Amiri', serif;
+    font-size: clamp(18px, 5vw, 21px);
+    line-height: 2.05;
+    color: var(--fg);
+  }
+  .dua.plea {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px; line-height: 1.95;
+  }
+
+  /* ---- Dua counter ---- */
+  .tasbeeh {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px 22px 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .phrase-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
+  .phrase-row button {
+    font-family: 'Amiri', serif; font-size: 16px;
+    background: transparent; border: 1px solid var(--line); color: var(--muted);
+    border-radius: 999px; padding: 7px 14px; cursor: pointer; transition: all .18s;
+  }
+  .phrase-row button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .phrase-row button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .phrase {
+    font-family: 'Amiri', serif; font-size: clamp(26px, 7.6vw, 33px);
+    color: var(--accent); margin-bottom: 4px; font-weight: 700; line-height: 1.5;
+  }
+  .meaning { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .count {
+    font-family: 'Tajawal', sans-serif; font-variant-numeric: tabular-nums;
+    font-size: 56px; font-weight: 700; color: var(--fg); line-height: 1; margin-bottom: 4px;
+  }
+  .total { font-size: 13px; color: var(--faint); margin-bottom: 22px; }
+  .tap {
+    width: 100%; max-width: 300px; margin: 0 auto; display: block; padding: 20px;
+    font-family: 'Tajawal', sans-serif; font-size: 18px; font-weight: 700;
+    color: #fff; background: var(--accent); border: none; border-radius: 16px;
+    cursor: pointer; transition: transform .08s ease, filter .2s ease;
+    user-select: none; -webkit-tap-highlight-color: transparent;
+  }
+  .tap:active { transform: scale(.97); filter: brightness(1.08); }
+  .tap:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .controls { display: flex; gap: 10px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+  .pill {
+    font-family: 'Tajawal', sans-serif; font-size: 14px; color: var(--muted);
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px;
+    padding: 9px 18px; cursor: pointer; transition: color .2s, border-color .2s;
+  }
+  .pill:hover { color: var(--accent); border-color: var(--accent); }
+  .pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .note { text-align: center; font-size: 14px; color: var(--muted); line-height: 1.9; margin-top: 14px; }
+
+  /* ---- Visitors ---- */
+  .visitors {
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 24px 22px;
+    box-shadow: var(--shadow);
+  }
+  .visitors .vlabel { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+  .vnum {
+    font-family: 'Tajawal', sans-serif; font-variant-numeric: tabular-nums;
+    font-size: 48px; font-weight: 700; color: var(--accent); line-height: 1;
+  }
+  .vhint { font-size: 12px; color: var(--faint); margin-top: 10px; }
+
+  /* ---- Share ---- */
+  .sharebox {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 22px; box-shadow: var(--shadow); text-align: center;
+  }
+  .sharebox h3 { font-family: 'Amiri', serif; font-size: 22px; margin: 0 0 6px; color: var(--fg); }
+  .sharebox p { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
+  .linkfield { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .linkfield input {
+    flex: 1; min-width: 0; font-family: 'Tajawal', sans-serif; font-size: 13px;
+    direction: ltr; text-align: left; color: var(--muted); background: var(--bg);
+    border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+  }
+  .linkfield input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .copybtn {
+    font-family: 'Tajawal', sans-serif; font-size: 15px; font-weight: 700; color: #fff;
+    background: var(--accent); border: none; border-radius: 10px; padding: 12px 20px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .copybtn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .sharerow { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .sharerow a {
+    display: inline-flex; align-items: center; gap: 7px; font-family: 'Tajawal', sans-serif;
+    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--accent);
+    background: var(--accent-soft); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px;
+  }
+  .sharerow a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer {
+    text-align: center; margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
+    color: var(--faint); font-size: 13px; line-height: 2;
+  }
+  footer .fname { font-family: 'Amiri', serif; font-size: 20px; color: var(--gold); display: block; margin-bottom: 6px; }
+
+  .theme-toggle {
+    position: fixed; top: env(safe-area-inset-top, 0px); inset-inline-start: 0; margin: 12px;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
+    background: var(--surface); color: var(--muted); cursor: pointer; font-size: 17px; z-index: 20;
+  }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeBtn" aria-label="تبديل الإضاءة">☾</button>
+
+<div class="wrap">
+  <header>
+    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <div class="eyebrow">صَدَقَة جَارِيَة</div>
+    <h1 class="name">
+      أشرف حسين
+      <span class="rahma">رحمه الله وأسكنه فسيح جناته</span>
+    </h1>
+    <p class="passed">اللهم اجعل هذه الصفحة في ميزان حسناته — دعوةٌ له بظهر الغيب تكفيه</p>
+  </header>
+
+  <section>
+    <div class="label">آياتٌ من كتاب الله</div>
+    <p class="sub">اضغط «استمع» لسماع التلاوة</p>
+
+    <div class="verse">
+      <p class="ayah">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ</p>
+      <div class="foot">
+        <span class="src">آية الكرسي — البقرة ٢٥٥</span>
+        <a class="listen" href="https://www.youtube.com/results?search_query=آية+الكرسي+تلاوة+مشاري+العفاسي" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>استمع</a>
+      </div>
+    </div>
+
+    <div class="verse">
+      <p class="ayah">كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ ۗ وَإِنَّمَا تُوَفَّوْنَ أُجُورَكُمْ يَوْمَ الْقِيَامَةِ ۖ فَمَنْ زُحْزِحَ عَنِ النَّارِ وَأُدْخِلَ الْجَنَّةَ فَقَدْ فَازَ ۗ وَمَا الْحَيَاةُ الدُّنْيَا إِلَّا مَتَاعُ الْغُرُورِ</p>
+      <div class="foot">
+        <span class="src">آل عمران — الآية ١٨٥</span>
+        <a class="listen" href="https://www.youtube.com/results?search_query=سورة+آل+عمران+كل+نفس+ذائقة+الموت+تلاوة" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>استمع</a>
+      </div>
+    </div>
+
+    <div class="verse">
+      <p class="ayah">يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ۚ ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَرْضِيَّةً ۚ فَادْخُلِي فِي عِبَادِي ۚ وَادْخُلِي جَنَّتِي</p>
+      <div class="foot">
+        <span class="src">الفجر — الآيات ٢٧–٣٠</span>
+        <a class="listen" href="https://www.youtube.com/results?search_query=سورة+الفجر+يا+أيتها+النفس+المطمئنة+تلاوة" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>استمع</a>
+      </div>
+    </div>
+
+    <div class="verse">
+      <p class="ayah">قُلْ هُوَ اللَّهُ أَحَدٌ ۚ اللَّهُ الصَّمَدُ ۚ لَمْ يَلِدْ وَلَمْ يُولَدْ ۚ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ</p>
+      <div class="foot">
+        <span class="src">سورة الإخلاص</span>
+        <a class="listen" href="https://www.youtube.com/results?search_query=سورة+الإخلاص+تلاوة+مشاري+العفاسي" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>استمع</a>
+      </div>
+    </div>
+
+    <div class="verse">
+      <p class="ayah">إِنَّ الَّذِينَ قَالُوا رَبُّنَا اللَّهُ ثُمَّ اسْتَقَامُوا تَتَنَزَّلُ عَلَيْهِمُ الْمَلَائِكَةُ أَلَّا تَخَافُوا وَلَا تَحْزَنُوا وَأَبْشِرُوا بِالْجَنَّةِ الَّتِي كُنْتُمْ تُوعَدُونَ</p>
+      <div class="foot">
+        <span class="src">فصّلت — الآية ٣٠</span>
+        <a class="listen" href="https://www.youtube.com/results?search_query=سورة+فصلت+إن+الذين+قالوا+ربنا+الله+تلاوة" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>استمع</a>
+      </div>
+    </div>
+
+    <p class="note">سورة يس تُقرأ إهداءً للميت — استمع لها كاملة:<br>
+      <a class="listen" style="margin-top:12px" href="https://www.youtube.com/results?search_query=سورة+يس+كاملة+تلاوة+خاشعة" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>سورة يس كاملة</a>
+    </p>
+  </section>
+
+  <section>
+    <div class="label">ادعُ له بالنقر</div>
+    <p class="sub">اختر الدعاء ثم اضغط الزر — كل نقرةٍ دعوةٌ له</p>
+    <div class="tasbeeh">
+      <div class="phrase-row" id="phraseRow">
+        <button data-phrase="اللَّهُمَّ اغْفِرْ لَه" data-mean="اللهم استر ذنوبه وتجاوز عنها" aria-pressed="true">اللهم اغفر له</button>
+        <button data-phrase="اللَّهُمَّ ارْحَمْه" data-mean="اللهم أنزل عليه واسع رحمتك">اللهم ارحمه</button>
+        <button data-phrase="اللَّهُمَّ أَسْكِنْهُ فَسِيحَ جِنَانِك" data-mean="اللهم أدخله أعلى الجنة">أسكنه جناتك</button>
+        <button data-phrase="اللَّهُمَّ نَوِّرْ لَهُ قَبْرَه" data-mean="اللهم اجعل قبره روضةً من رياض الجنة">نوّر قبره</button>
+        <button data-phrase="اللَّهُمَّ ثَبِّتْهُ عِنْدَ السُّؤَال" data-mean="اللهم ثبّته بالقول الثابت">ثبّته عند السؤال</button>
+      </div>
+      <div class="phrase" id="phraseText">اللَّهُمَّ اغْفِرْ لَه</div>
+      <div class="meaning" id="phraseMean">اللهم استر ذنوبه وتجاوز عنها</div>
+      <div class="count" id="count">0</div>
+      <div class="total">إجمالي دعواتك في هذه الجلسة: <span id="total">0</span></div>
+      <button class="tap" id="tapBtn">ادعُ له — واحتسب الأجر</button>
+      <div class="controls"><button class="pill" id="resetBtn">تصفير العدّاد</button></div>
+    </div>
+    <p class="note">كلّ دعوةٍ خفيفةٌ على اللسان، ثقيلةٌ في ميزانه. ادعُ له ما استطعت، فالدعاء يصل.</p>
+  </section>
+
+  <section>
+    <div class="label">دعاءٌ مُطوَّلٌ للمرحوم أشرف حسين</div>
+
+    <div class="dua">اللهم اغفر لأشرف حسين وارحمه، وعافِه واعفُ عنه، وأكرم نُزُله، ووسّع مُدخَله، واغسله بالماء والثلج والبرَد، ونقِّه من الخطايا كما يُنقّى الثوب الأبيض من الدَّنَس.</div>
+
+    <div class="dua">اللهم أبدله داراً خيراً من داره، وأهلاً خيراً من أهله، وأدخله الجنة، وأعذه من عذاب القبر وعذاب النار، وافسح له في قبره مدَّ بصره، ونوّر له فيه.</div>
+
+    <div class="dua">اللهم إنه في ذمّتك وحبل جوارك، فقِه من فتنة القبر وعذاب النار، وأنت أهل الوفاء والحق، اللهم اغفر له وارحمه، فإنك أنت الغفور الرحيم.</div>
+
+    <div class="dua">اللهم إن كان مُحسناً فزِد في إحسانه، وإن كان مُسيئاً فتجاوز عن سيئاته، ولقّه برحمتك رضاك، واجعل ما أصابه كفّارةً ورفعةً في درجاته.</div>
+
+    <div class="dua">اللهم اجعل قبره روضةً من رياض الجنة، ولا تجعله حفرةً من حُفَر النيران، وآنس وحشته، واجبُر كسر مَن بعده، واجعل الفردوس الأعلى مُستقرّه ومثواه.</div>
+
+    <div class="dua">اللهم بشّره برحمتك ورضوانك وجنتك، واجمعنا به في مستقرّ رحمتك، تحت لواء نبيّك محمد صلى الله عليه وسلم، في مقعد صدقٍ عند مليكٍ مقتدر.</div>
+
+    <div class="dua plea">يا بلال، ولكلّ من يفتح هذه الصفحة: لا تمرّ دون أن تدعو له. قل في سرّك «اللهم ارحمه واغفر له» — فالميت ينتظر دعوة الأحياء، وأنت لا يُنقصك شيءٌ أن تُهديه رحمة.</div>
+  </section>
+
+  <section>
+    <div class="label">شارك الصفحة</div>
+    <p class="sub">كل من يدعو له من هذا الرابط، لك مثل أجره</p>
+    <div class="sharebox">
+      <h3>انشرها تكن لك صدقة جارية</h3>
+      <p>انسخ الرابط وأرسله لمن تحب، أو شاركه مباشرة</p>
+      <div class="linkfield">
+        <input id="linkInput" type="text" readonly value="">
+        <button class="copybtn" id="copyBtn">نسخ الرابط</button>
+      </div>
+      <div class="sharerow">
+        <a id="waShare" href="#" target="_blank" rel="noopener">واتساب</a>
+        <a id="tgShare" href="#" target="_blank" rel="noopener">تيليجرام</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">عدد من دعوا له</div>
+    <p class="sub">كل من يفتح الصفحة ويدعو له، يزيد الرقم — ويراه من بعده</p>
+    <div class="visitors">
+      <div class="vlabel">زار هذه الصفحة ودعا له</div>
+      <div class="vnum" id="vnum">…</div>
+      <div class="vhint">نسأل الله أن يصل إليه دعاء كل واحد منهم</div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="fname">أشرف حسين</span>
+    اللهم اجعل القرآن والدعاء نوراً في قبره<br>
+    صَدَقَةٌ جاريةٌ على روحه الطاهرة · تقبّل الله
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "dua_ashraf_v3";
+  var countEl = document.getElementById("count");
+  var totalEl = document.getElementById("total");
+  var phraseText = document.getElementById("phraseText");
+  var phraseMean = document.getElementById("phraseMean");
+  var tapBtn = document.getElementById("tapBtn");
+  var resetBtn = document.getElementById("resetBtn");
+  var row = document.getElementById("phraseRow");
+
+  var state = { current: 0, total: 0 };
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) { var p = JSON.parse(saved); if (p && typeof p.total === "number") state.total = p.total; }
+  } catch (e) {}
+
+  function render() { countEl.textContent = state.current; totalEl.textContent = state.total; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify({ total: state.total })); } catch (e) {} }
+  function tap() {
+    state.current++; state.total++; render(); save();
+    if (window.navigator && navigator.vibrate) { try { navigator.vibrate(12); } catch (e) {} }
+  }
+  tapBtn.addEventListener("click", tap);
+  resetBtn.addEventListener("click", function () { state.current = 0; render(); });
+  row.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b) return;
+    Array.prototype.forEach.call(row.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+    b.setAttribute("aria-pressed", "true");
+    phraseText.textContent = b.getAttribute("data-phrase");
+    phraseMean.textContent = b.getAttribute("data-mean");
+    state.current = 0; render();
+  });
+
+  var url = location.href;
+  var linkInput = document.getElementById("linkInput");
+  var copyBtn = document.getElementById("copyBtn");
+  var m = "صدقة جارية على روح المرحوم أشرف حسين — ادعُ له بالقرآن والدعاء: ";
+  linkInput.value = url;
+  document.getElementById("waShare").href = "https://wa.me/?text=" + encodeURIComponent(m + url);
+  document.getElementById("tgShare").href = "https://t.me/share/url?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(m);
+  function copied() { var o = copyBtn.textContent; copyBtn.textContent = "تم النسخ ✓"; setTimeout(function () { copyBtn.textContent = o; }, 1800); }
+  copyBtn.addEventListener("click", function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(copied).catch(function () { linkInput.focus(); linkInput.select(); copied(); });
+    } else { linkInput.focus(); linkInput.select(); copied(); }
+  });
+  linkInput.addEventListener("focus", function () { linkInput.select(); });
+
+  var tbtn = document.getElementById("themeBtn");
+  function isDark() {
+    var a = document.documentElement.getAttribute("data-theme");
+    if (a) return a === "dark";
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function applyTheme(t) {
+    if (t) document.documentElement.setAttribute("data-theme", t);
+    else document.documentElement.removeAttribute("data-theme");
+    tbtn.textContent = isDark() ? "☀" : "☾";
+  }
+  var st = null;
+  try { st = localStorage.getItem(KEY + "_theme"); } catch (e) {}
+  if (st) applyTheme(st); else tbtn.textContent = isDark() ? "☀" : "☾";
+  tbtn.addEventListener("click", function () {
+    var n = isDark() ? "light" : "dark";
+    applyTheme(n);
+    try { localStorage.setItem(KEY + "_theme", n); } catch (e) {}
+  });
+
+  render();
+
+  // ---- Shared visitor counter (free keyless service) ----
+  var vnum = document.getElementById("vnum");
+  function showNum(n) {
+    try { vnum.textContent = Number(n).toLocaleString("ar-EG"); }
+    catch (e) { vnum.textContent = n; }
+  }
+  (function countVisit() {
+    var ns = "sadaqa-ashraf-hussein-blx";
+    var once = false;
+    try { once = sessionStorage.getItem("counted_" + ns) === "1"; } catch (e) {}
+    var ep = "https://abacus.jasoncameron.dev/" + (once ? "get" : "hit") + "/" + ns + "/visits";
+    fetch(ep)
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && typeof d.value === "number") {
+          showNum(d.value);
+          if (!once) { try { sessionStorage.setItem("counted_" + ns, "1"); } catch (e) {} }
+        } else { vnum.textContent = "—"; }
+      })
+      .catch(function () { vnum.textContent = "—"; });
+  })();
+})();
+</script>
+</body>
+</html>
+
+</body></html>
